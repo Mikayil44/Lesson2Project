@@ -9,26 +9,23 @@ namespace MPL3
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string gender ;
+            string gender ="";
             if (radioButton1.Checked) gender = radioButton1.Text;
             else if (radioButton2.Checked) gender = radioButton2.Text;
             else if (radioButton3.Checked) gender = radioButton3.Text;
-            else gender = "N/A";
-                string programmingLanguages = "";
+            string programmingLanguages ="";
             if (checkBox1.Checked) programmingLanguages += checkBox1.Text + " ";
-            else if (checkBox2.Checked) programmingLanguages +=  checkBox2.Text+ " ";
-            else if (checkBox3.Checked) programmingLanguages +=   checkBox3.Text + " ";
-            else programmingLanguages = "N/A";
-            string country;
+            if (checkBox2.Checked) programmingLanguages +=  checkBox2.Text+ " ";
+            if (checkBox3.Checked) programmingLanguages +=   checkBox3.Text + " ";
+            string country="";
             if (comboBox1.SelectedItem != null) country = comboBox1.SelectedItem.ToString();
-            else country = "N/A";
-            string city;
+            string city="";
             if (listBox1.SelectedItem != null) city = listBox1.SelectedItem.ToString();
-            else city = "N/A";
             MessageBox.Show("Gender: "+gender+
                             "\nCountry: "+country+
                             "\nCity: "+city+
                             "\nProgramming Languages: "+programmingLanguages);
         }
+
     }
 }
